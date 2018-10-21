@@ -1,0 +1,31 @@
+
+Login To Kubernetes Dashboard:
+------------------------------
+
+1. kubectl get secret -n kube-system
+2. kubectl cluster-info
+3. kubectl describe secrets kubernetes-dashboard-token -n kube-system
+4. kubectl get cluster-info
+
+Giving dashboard superuser acess:
+---------------------------------
+https://www.devops.buzz/kubernetes-install-dashboard/
+Creating service account: https://codeandunicorns.com/kubernetes-dashboard-kops/
+
+For development,production create namespace, service accounts.
+
+
+How to setup kubectl to existing kops cluster:
+----------------------------------------------
+Get the existing config: 
+
+kubectl config view -oyaml
+
+export SERVER_NAME=
+export CLUSTER_NAME=
+export KUBECTL_USER=
+export KUBECTL_PASSWORD=
+kubectl config set-cluster ${CLUSTER_NAME} --insecure-skip-tls-verify=true --server=${SERVER_NAME}
+kubectl config set-credentials ${CLUSTER_NAME} --username=${KUBECTL_USER} --password=${KUBECTL_PASSWORD}
+kubectl config set-context ${CLUSTER_NAME} --user=${CLUSTER_NAME} --namespace=default --cluster=${CLUSTER_NAME}
+kubectl config use-context ${CLUSTER_NAME}

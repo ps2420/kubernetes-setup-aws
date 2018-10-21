@@ -1,0 +1,16 @@
+prometheus-monitoring:
+---------------------
+https://devopscube.com/setup-prometheus-monitoring-on-kubernetes/
+https://akomljen.com/get-kubernetes-cluster-metrics-with-prometheus-in-5-minutes/   
+
+Deployment1:
+-----------
+https://github.com/giantswarm/kubernetes-prometheus
+Prometheus: kubectl get pods -n monitoring (http://127.0.0.1:9090/targets prometheus)
+Alert-manager: kubectl port-forward -n monitoring <node-name> 9093.  (http://127.0.0.1:9093/#/alerts -- alert-manager)
+Graphana: kubectl port-forward -n monitoring grafana-core-f796895df-4rt8m 3000
+
+
+Deployment2: (TO-DO)
+------------
+https://itnext.io/kubernetes-monitoring-with-prometheus-in-15-minutes-8e54d1de2e13

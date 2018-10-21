@@ -1,0 +1,79 @@
+kops delete cluster:
+--------------------
+https://aws.amazon.com/blogs/compute/kubernetes-clusters-aws-kops/
+
+Install kubernetes, kops on macos:
+----------------------------------
+https://medium.com/containermind/how-to-create-a-kubernetes-cluster-on-aws-in-few-minutes-89dda10354f4
+
+Install kubectl:
+----------------
+mkdir -p kubernetes-resources
+cd kubernetes-resources
+curl -s -LO https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+
+
+Follow this link, create dns name and sub dns name:
+---------------------------------------------------
+https://github.com/kubernetes/kops/blob/master/docs/examples/kops-test-route53-subdomain.md
+https://github.com/kubernetes/kops/blob/master/docs/aws.md
+
+Create bucket:
+--------------
+aws configure
+export BUCKET_NAME=gocd.amarispartner.com
+export LOCATION_CONSTRAINT=ap-southeast-1
+aws s3api create-bucket --bucket $BUCKET_NAME --create-bucket-configuration LocationConstraint=$LOCATION_CONSTRAINT
+aws s3api put-bucket-versioning --bucket $BUCKET_NAME --versioning-configuration Status=Enabled
+aws s3api put-bucket-encryption --bucket $BUCKET_NAME --server-side-encryption-configuration '{"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"AES256"}}]}'
+
+Create kubernets cluster:
+-------------------------
+https://github.com/kubernetes/kops/blob/master/docs/high_availability.md
+
+export KOPS_CLUSTER_NAME=gocd.amarispartner.com
+export AVAIL_ZONE=ap-southeast-1a,ap-southeast-1b,ap-southeast-1c
+export KOPS_STATE_STORE=s3://$BUCKET_NAME
+export S3_BUCKET=$KOPS_STATE_STORE
+export M_AVAIL_ZONE=$AVAIL_ZONE
+export AWS_AVAILABILITY_ZONES=$AVAIL_ZONE
+
+
+High Availability:
+------------------ 
+kops create cluster --node-count=3 --node-size=t2.medium --zones $AVAIL_ZONE --master-zones $M_AVAIL_ZONE --master-size t2.medium --name $KOPS_CLUSTER_NAME
+
+Non HA:
+-------
+kops create cluster --node-count=3 --node-size=t2.medium --zones $AVAIL_ZONE --master-size t2.medium --name $KOPS_CLUSTER_NAME
+
+kops update cluster --name ${KOPS_CLUSTER_NAME} --yes 
+Wait for a while: 5-10 minutes
+
+kops validate cluster 
+
+Deploy Dashboard:
+-----------------
+DZone: https://dzone.com/articles/how-to-create-a-kubernetes-cluster-on-aws-in-few-m
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+
+https://<kubernetes-master-hostname>/ui
+https://<kubernetes-master-hostname>/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=default
+
+User Id/password for ui:
+----------------------
+kops get secrets kube --type secret -oplaintext
+kubectl cluster-info
+kubectl describe secrets kubernetes-dashboard-token -n kube-system 
+
+Giving dashboard superuser acess:
+---------------------------------
+https://www.devops.buzz/kubernetes-install-dashboard/
+Creating service account: https://codeandunicorns.com/kubernetes-dashboard-kops/
+
+
+Delete A CLUSTER:
+-----------------
+kops delete cluster --name=$KOPS_CLUSTER_NAME --yes
+

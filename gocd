@@ -1,0 +1,17 @@
+go-cd-installation
+-------------------
+Istall helm to instal on kubernetes cluster
+https://docs.gocd.org/current/gocd_on_kubernetes/gocd_helm_chart/helm_install.html
+
+helm init 
+1. kubectl create serviceaccount -n kube-system tiller
+2. kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+3. kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'   --ignore the error if you get it
+
+4. helm repo add stable https://kubernetes-charts.storage.googleapis.com
+5. helm install stable/gocd --name gocd --namespace gocd
+ 
+helm installation:
+-----------------
+kubectl get pods -n gocd
+kubectl port-forward --namespace gocd <pod-name> 8153
