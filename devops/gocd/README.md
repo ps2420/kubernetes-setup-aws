@@ -1,5 +1,5 @@
 ## Introduction
-Devops repository for gocd infrastrucures (for BICS code base) - kubernetes cluster.
+Devops repository for gocd infrastrucures - kubernetes cluster.
 
 tf folder contains scripts for creating kubernetes infra by terraform script
 k8-components contains shell script to deploy kubernetes components for ex: prometheys, gocd, sonar..
