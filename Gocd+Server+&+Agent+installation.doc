@@ -1,0 +1,383 @@
+Message-ID: <1730893110.61429.1545291373958.JavaMail.confluence@ip-10-0-1-216>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_61428_1876445143.1545291373958"
+
+------=_Part_61428_1876445143.1545291373958
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Gocd Server &amp; Agent installation</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Gocd Server &amp; Agent installation</h1>
+    <div class=3D"Section1">
+        <p><strong>Pre-requisites:</strong> Kubernetes Cluster should be in=
+ place before running of any of the commands</p>
+<p>Go cd installation on kubernetes is a simple and easy process <strong>Fo=
+llow the page:</strong>&nbsp;<a class=3D"external-link" href=3D"https://doc=
+s.gocd.org/current/gocd_on_kubernetes/introduction.html" rel=3D"nofollow">h=
+ttps://docs.gocd.org/current/gocd_on_kubernetes/introduction.html</a></p>
+<h3 id=3D"GocdServer&amp;Agentinstallation-Gocdinstallation:">Go cd install=
+ation:</h3>
+<ul>
+<li><strong>Helm Installation:</strong><a class=3D"external-link" href=3D"h=
+ttps://docs.gocd.org/current/gocd_on_kubernetes/gocd_helm_chart/helm_instal=
+l.html" rel=3D"nofollow">https://docs.gocd.org/current/gocd_on_kubernetes/g=
+ocd_helm_chart/helm_install.html</a></li>
+<li>helm init</li>
+<li>kubectl create serviceaccount -n kube-system tiller</li>
+<li>kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=3Dc=
+luster-admin --serviceaccount=3Dkube-system:tiller</li>
+<li>kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":=
+{"template":{"spec":{"serviceAccount":"tiller"}}}}' --ignore the error if y=
+ou get it</li>
+<li>helm repo add stable <a class=3D"external-link" href=3D"https://kuberne=
+tes-charts.storage.googleapis.com" rel=3D"nofollow">https://kubernetes-char=
+ts.storage.googleapis.com</a></li>
+<li>helm install stable/gocd --name gocd --namespace gocd&nbsp; &nbsp;(If y=
+ou do get any error in running the commands follow the commands printed on =
+console)</li>
+</ul>
+<h3 id=3D"GocdServer&amp;Agentinstallation-RunningGo-cdthroughproxy:">Runni=
+ng Go-cd through proxy:</h3>
+<ul>
+<li>kubectl get pods -n gocd</li>
+<li>kubectl port-forward --namespace gocd &lt;pod-name&gt; 8153</li>
+</ul>
+<p><strong>Post Installation Steps:</strong></p>
+<ul>
+<li><strong>&nbsp; </strong>To allow go-server to ssh and checkout the code=
+ from git repository</li>
+<li><a class=3D"external-link" href=3D"https://github.com/helm/charts/tree/=
+master/stable/gocd" rel=3D"nofollow">https://github.com/helm/charts/tree/ma=
+ster/stable/gocd</a></li>
+</ul>
+<p><br></p>
+<p>To configure file based authentication look for available other settings=
+</p>
+<div class=3D"table-wrap">
+<table class=3D"wrapped confluenceTable">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh">Seq</th>
+<th class=3D"confluenceTh">Steps</th>
+<th class=3D"confluenceTh">Commands to run</th>
+</tr>
+<tr>
+<td class=3D"confluenceTd">1</td>
+<td class=3D"confluenceTd">Generate secret key for github</td>
+<td class=3D"confluenceTd">Generate secret key and upload to bitbucket.</td=
+>
+</tr>
+<tr>
+<td class=3D"confluenceTd">2</td>
+<td class=3D"confluenceTd"><p>Generate secret key for</p><p>gocd-agent &amp=
+; server</p></td>
+<td class=3D"confluenceTd">
+<ul>
+<li><span>kubectl create secret generic gocd-agent-ssh --from-file=3Did_rsa=
+=3D/Users/...../.ssh/id_rsa --from-file=3Dknown_hosts=3D/Users/...../.ssh/k=
+nown_hosts --namespace=3Dgocd</span><span> </span></li>
+<li><span><span>kubectl create secret generic gocd-server-ssh --from-file=
+=3Did_rsa=3D/Users/..../.ssh/id_rsa --from-file=3Dknown_hosts=3D/Users/....=
+./.ssh/known_hosts --namespace=3Dgocd</span></span><span><span><br class=3D=
+"_mce_tagged_br"></span></span></li>
+</ul></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">3</td>
+<td colspan=3D"1" class=3D"confluenceTd">upgrade the ssh key settings</td>
+<td colspan=3D"1" class=3D"confluenceTd">
+<ul>
+<li>helm upgrade gocd stable/gocd --namespace gocd --set server.security.ss=
+h.enabled=3Dtrue --set agent.security.ssh.enabled=3Dtrue</li>
+</ul></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">4</td>
+<td colspan=3D"1" class=3D"confluenceTd">Configure elastic agent</td>
+<td colspan=3D"1" class=3D"confluenceTd">
+<ul>
+<li>Configure the elastic agent profile from Admin =E2=86=92 Elastic Agent =
+Profile =E2=86=92 sample elastic agent profile can be found here: <a class=
+=3D"external-link" href=3D"https://hub.docker.com/r/gocd/" rel=3D"nofollow"=
+>https://hub.docker.com/r/gocd/</a></li>
+</ul></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">5</td>
+<td colspan=3D"1" class=3D"confluenceTd">
+<ul>
+<li>Update settings of elastic agent as POD</li>
+<li>Extra settings are required to configure the ssh key.</li>
+<li>This is a known issue: <a class=3D"external-link" href=3D"https://githu=
+b.com/helm/charts/pull/4270" rel=3D"nofollow">https://github.com/helm/chart=
+s/pull/4270</a></li>
+<li>Want to have more ref. how to create elastic agent Get access to <a cla=
+ss=3D"external-link" href=3D"https://bitbucket.ti-ra.net/projects/DEVOPS" r=
+el=3D"nofollow">https://bitbucket.ti-ra.net/projects/DEVOPS</a></li>
+<li><img class=3D"emoticon emoticon-plus" src=3D"99b60dfabb20fceae71eba4e97=
+fff75b" data-emoticon-name=3D"plus" alt=3D"(plus)"> take a look <a class=3D=
+"external-link" href=3D"https://dzone.com/articles/a-dockerfile-for-maven-b=
+ased-github-projects" rel=3D"nofollow">https://dzone.com/articles/a-dockerf=
+ile-for-maven-based-github-projects</a></li>
+<li>kubectl commands for checking logs for a namespace</li>
+<li>kubectl get all -n gocd</li>
+<li>kubectl logs <span style=3D"text-decoration: line-through;">-f &lt;pod&=
+gt; -n gocd</span></li>
+</ul><p><br></p></td>
+<td colspan=3D"1" class=3D"confluenceTd"><p>apiVersion: v1<br>kind: Pod<br>=
+metadata:<br> name: pod-name-prefix-{{ POD_POSTFIX }}<br> labels:<br> app: =
+web<br>spec:<br> volumes:<br> - name: ssh-secrets<br> secret:<br> secretNam=
+e: gocd-server-ssh<br> containers:<br> - name: gocd-agent-container-{{ CONT=
+AINER_POSTFIX }}<br> image: gocd/gocd-agent-docker-dind:v18.10.0<br> securi=
+tyContext:<br> privileged: true<br> volumeMounts:<br> - name: ssh-secrets<b=
+r> readOnly: true<br> mountPath: /home/go/.ssh</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><span style=3D"color: rgb(0,0,255);">T<span style=3D"color: rgb(0,0,128)=
+;">o access go cd install the ingress-nginx controller and deploy the rules=
+.</span><em><span style=3D"color: rgb(0,0,128);"> <strong>Note:</strong> </=
+span></em><span style=3D"color: rgb(0,0,128);">You may have to change Ingre=
+ss rules from kubernetes dashboard.</span></span></p>
+<p><br></p>
+    </div>
+</body>
+</html>
+------=_Part_61428_1876445143.1545291373958
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: 7bit
+Content-Location: file:///C:/99b60dfabb20fceae71eba4e97fff75b
+
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#00875A" cx="8" cy="8" r="8"/><path d="M9 7h3a1 1 0 0 1 0 2H9v3a1 1 0 0 1-2 0V9H4a1 1 0 1 1 0-2h3V4a1 1 0 1 1 2 0v3z" fill="#FFF"/></g></svg>
+------=_Part_61428_1876445143.1545291373958--

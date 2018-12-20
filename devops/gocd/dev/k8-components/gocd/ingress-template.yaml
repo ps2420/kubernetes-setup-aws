@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gocd-server
+  namespace: gocd
+  labels:
+    app: gocd
+    chart: gocd-1.5.5
+    component: server
+    heritage: Tiller
+    release: gocd
+spec:
+  rules:
+  - host: GOCD_DNS
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: gocd-server
+          servicePort: 8153

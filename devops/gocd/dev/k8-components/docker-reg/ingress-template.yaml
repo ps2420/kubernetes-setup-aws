@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: docker-ingress
+  namespace: docker-registry
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 4000m
+spec:
+  rules:
+  - host: DOCKER_DNS
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: docker-registry
+          servicePort: 5000

@@ -1,10 +1,10 @@
-Message-ID: <1910590106.23826.1540127292957.JavaMail.confluence@ip-10-0-1-216>
+Message-ID: <690912666.61433.1545291385659.JavaMail.confluence@ip-10-0-1-216>
 Subject: Exported From Confluence
 MIME-Version: 1.0
 Content-Type: multipart/related; 
-	boundary="----=_Part_23825_636924351.1540127292956"
+	boundary="----=_Part_61432_67590388.1545291385659"
 
-------=_Part_23825_636924351.1540127292956
+------=_Part_61432_67590388.1545291385659
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 Content-Location: file:///C:/exported.html
@@ -257,7 +257,7 @@ data-linked-resource-type=3D"attachment" data-linked-resource-default-alias=
 =3D"Screen Shot 2018-10-21 at 3.09.30 PM.png" data-base-url=3D"https://conf=
 luence.ti-ra.net" data-linked-resource-content-type=3D"image/png" data-link=
 ed-resource-container-id=3D"5180343" data-linked-resource-container-version=
-=3D"9" width=3D"468"></span></p>
+=3D"12" width=3D"468"></span></p>
 <p><br></p>
 <p>Kubernetes cluster commands user guide:</p>
 <div class=3D"table-wrap">
@@ -352,7 +352,10 @@ ter-size t2.medium --name $KOPS_CLUSTER_NAME</span></li>
 <li><strong>Non HA mode:</strong>kops create cluster --node-count=3D3 --nod=
 e-size=3Dt2.medium --zones $AVAIL_ZONE --master-size t2.medium --name $KOPS=
 _CLUSTER_NAME</li>
-</ul>
+</ul><p><strong>Note: </strong>providing ami or kubernetes version may resu=
+lt in error while running the commands kops validate cluster.. (<em><span s=
+tyle=3D"color: rgb(255,0,0);">Always update kops and kubernetes and keep it=
+ on same version) </span></em></p>
 <ul>
 <li>kops update cluster --name ${KOPS_CLUSTER_NAME} --yes&nbsp;(<span style=
 =3D"color: rgb(0,0,255);">wait 5-10 mins</span>)</li>
@@ -436,7 +439,11 @@ ended for your local dev environment</td>
 <ul>
 <li>kubectl get secret -n kube-system</li>
 <li>kubectl cluster-info</li>
-<li>kubectl describe secrets kubernetes-dashboard-token -n kube-system</li>
+<li>kops get secrets kube --type secret -oplaintext . (get the initial admi=
+n password)</li>
+<li>kubectl <span style=3D"color: rgb(36,41,46);">--insecure-skip-tls-verif=
+y&nbsp; </span>describe secrets kubernetes-dashboard-token -n kube-system</=
+li>
 <li>kubectl get cluster-info</li>
 </ul></td>
 <td class=3D"confluenceTd">Command required in following over all steps</td=
@@ -480,7 +487,7 @@ style=3D"color: rgb(0,0,255);"><span style=3D"color: rgb(0,0,0);">and share=
     </div>
 </body>
 </html>
-------=_Part_23825_636924351.1540127292956
+------=_Part_61432_67590388.1545291385659
 Content-Type: application/octet-stream
 Content-Transfer-Encoding: base64
 Content-Location: file:///C:/6a05f9f0acf703883681c7dbb83561ad
@@ -4508,4 +4515,4 @@ TlwKEyBAgAABAgQIECBAgAABAgQIECBAgEDtAhLftbeQ+hEgQIAAAQIECBAgQIAAAQIECBAgQIBA
 JwGJ705cChMgQIAAAQIECBAgQIAAAQIECBAgQIBA7QIS37W3kPoRIECAAAECBAgQIECAAAECBAgQ
 IECAQCcBie9OXAoTIECAAAECBAgQIECAAAECBAgQIECAQO0CEt+1t5D6ESBAgAABAgQIECBAgAAB
 AgQIECBAgEAngX8D5P7n2vyP5J8AAAAASUVORK5CYII=
-------=_Part_23825_636924351.1540127292956--
+------=_Part_61432_67590388.1545291385659--

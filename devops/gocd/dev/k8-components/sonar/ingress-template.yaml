@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sonar-ingress
+  namespace: sonarqube
+spec:
+  rules:
+  - host: SONAR_DNS
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sonarqube-sonarqube
+          servicePort: 9000

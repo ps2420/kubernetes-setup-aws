@@ -1,0 +1,359 @@
+Message-ID: <369732153.61427.1545291369762.JavaMail.confluence@ip-10-0-1-216>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_61426_1390400313.1545291369762"
+
+------=_Part_61426_1390400313.1545291369762
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Grafana/Prometheus Monitoring</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Grafana/Prometheus Monitoring</h1>
+    <div class=3D"Section1">
+        <p><strong>Pre-requisites:</strong></p>
+<ul>
+<li>AWS Kubernetes cluster up and running,</li>
+<li>AWS Route 53 Type A record to be created as part of this process.</li>
+</ul>
+<p><u><strong>Preferred websites:</strong></u></p>
+<ul>
+<li><a class=3D"external-link" href=3D"https://rohanc.me/monitoring-kuberne=
+tes-prometheus-grafana/" rel=3D"nofollow">https://rohanc.me/monitoring-kube=
+rnetes-prometheus-grafana/</a>&nbsp;(helm installation preferred..)</li>
+<li><a class=3D"external-link" href=3D"https://medium.com/@at_ishikawa/inst=
+all-prometheus-and-grafana-by-helm-9784c73a3e97" rel=3D"nofollow">https://m=
+edium.com/@at_ishikawa/install-prometheus-and-grafana-by-helm-9784c73a3e97<=
+/a></li>
+<li><a class=3D"external-link" href=3D"https://akomljen.com/get-kubernetes-=
+cluster-metrics-with-prometheus-in-5-minutes/" rel=3D"nofollow">https://ako=
+mljen.com/get-kubernetes-cluster-metrics-with-prometheus-in-5-minutes/</a>&=
+nbsp;</li>
+</ul>
+<p><br></p>
+<ul>
+<li>UserId: admin</li>
+<li>password:&nbsp; kubectl get secret --namespace prometheus grafana -o js=
+onpath=3D"{.data.admin-password}" | base64 --decode ; echo</li>
+</ul>
+<div class=3D"table-wrap">
+<table class=3D"relative-table wrapped confluenceTable" style=3D"width: 76.=
+7494%;">
+<colgroup>
+<col style=3D"width: 2.84593%;">
+<col style=3D"width: 27.3798%;">
+<col style=3D"width: 66.9284%;">
+<col style=3D"width: 2.84593%;">
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh">Sequence</th>
+<th class=3D"confluenceTh">Steps</th>
+<th class=3D"confluenceTh">Commands</th>
+<th class=3D"confluenceTh">Comments</th>
+</tr>
+<tr>
+<td class=3D"confluenceTd">1</td>
+<td class=3D"confluenceTd"><p>Create DNS NAME under AWS Route 53</p><p>Type=
+ A record</p></td>
+<td class=3D"confluenceTd"><p>export GRAFANA_DNS=3D<a class=3D"external-lin=
+k" href=3D"http://grafana.amarispartner.com/" rel=3D"nofollow">grafana.amar=
+ispartner.com</a></p></td>
+<td class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">2</td>
+<td class=3D"confluenceTd">Install prometheus</td>
+<td class=3D"confluenceTd"><p>helm install stable/prometheus --version 6.7.=
+4 --name prometheus --namespace prometheus \<br>--set alertmanager.persiste=
+ntVolume.size=3D50Gi \<br>--set server.persistentVolume.size=3D50Gi</p></td=
+>
+<td class=3D"confluenceTd"><br></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd">3</td>
+<td class=3D"confluenceTd">Install grafana</td>
+<td class=3D"confluenceTd">helm install --name grafana stable/grafana --nam=
+espace prometheus -f prometheus/values.yaml</td>
+<td class=3D"confluenceTd">
+<div class=3D"content-wrapper">
+<p><img height=3D"250" style=3D"margin: 2px; border: 1px solid #ddd; box-si=
+zing: border-box; vertical-align: text-bottom;" src=3D"e008b01fce63c05efd66=
+330cd0e47ae7" width=3D"250"></p>
+</div></td>
+</tr>
+<tr>
+<td colspan=3D"1" class=3D"confluenceTd">4</td>
+<td colspan=3D"1" class=3D"confluenceTd">Setup ingress rules</td>
+<td colspan=3D"1" class=3D"confluenceTd"><p>sed -e "s/GRAFANA_DNS/$GRAFANA_=
+DNS/g" prometheus/ingress-template.yaml | kubectl apply -f -</p><p><br></p>=
+<p>https://grafana.amarispartner.com</p></td>
+<td colspan=3D"1" class=3D"confluenceTd"><p>apiVersion: extensions/v1beta1<=
+br>kind: Ingress<br>metadata:<br> name: grafana-ingress<br> namespace: prom=
+etheus<br>spec:<br> rules:<br> - host: GRAFANA_DNS<br> http:<br> paths:<br>=
+ - path: /<br> backend:<br> serviceName: grafana<br> servicePort: 80</p></t=
+d>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br><br></p>
+    </div>
+</body>
+</html>
+------=_Part_61426_1390400313.1545291369762
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/e008b01fce63c05efd66330cd0e47ae7
+
+iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAMAAAC/MqoPAAADAFBMVEX19fXv7+98fHx1dXV9fX23
+t7eenp5wcHDn5+f09PTz8/Pd3d2SkpLY2Njt7e3Q0NCioqJycnKqqqq7u7uurq6CgoKGhobOzs7D
+w8PR0dGNjY3Hx8fj4+PGxsbS0tKoqKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAABYhwFnAAADPElEQVR42u3cC1PaQBSG4UNuGxaIQUCgQOv//1mWjm2nrSIKIoZ0
+w107bWFGCSTv40wIyXHCxy4R2DUiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHACCoc5
+jD+b2TuWRpb1mKEn2Hdcf+da1/IzFN1z96l2vYM8KOsgR9m5t8/Zswy1unrX8qNu9aOU4+j2QY7i
+RK+3BC1vYtUb8WS38gxFr4zs8VMs0X1lklr0dE5zTdVerLRVJbXTXCrRA+fjavXMDnJ1hq+GV6vV
+wVk1rfZw0jjoaLxZnziSaa96sL31oSmw/9yf3Q5fdOLNnbvUWp13c0QnOtGJfhQf4Wl1ohOd6EQn
+OtGJTnSiH1d0rXWeoidhp8uRZNsdSVHnJfp44JvGDhd3KjOReJCfVj+TUXjTkuQb+Z8jkbNUWj2V
+gafYepQ7bZes+k0lNtHd8exf5VmKXh7qqTxJxX6whlOR0lhPUoiezvcSPbU1Xca3Ov8pz1J0qTml
+1WpF1SRP0aVnhU2/WPSbodORfEWXwC07quqU3YLkLfoblvMenuhHFj3aa+qnH2UourVXmMjKUvR4
+n+nBB4rOpHAAAAAAAAAAQFZcpvbLf8eYG9HfSqCS6WBa+d2qipfzZi7Xy5pSqizJVBKzc37ZltKy
+PljVX4bmtlM3i9KpPaOqbhb1qqiO1h+seeJ19JZqSzfJrs61tBfjUdV5fWNTr7q6rOaLd3utv9M/
+05aHZjEsy+SLuXVfTg278a6lHyTbRo9yvdjm3Sb13qbe6YtuP/dFn9xrfSxd8zM2PVldXrwePXwy
+Hf3cbHTjhttdbPomPSnJcFP/YJ4Y6ZtF++TOIReeeBemT3uFVW9fd/h43ZIfQ1stL7rkqvnVmrbq
+N4sT++NmF6RgUjw+xdJcbLlOxrOTk5a/jn51GzWWo9xTqRSmL+pPlwqTeVDqk+nDi4azG4E0k/We
+crXuVM3OntZ1tWzecN7+W/Un2+oSj5NLE4Rf4+fiskv/msS3yTTgz3Urin6YyNXvD1G0Os8O5g9l
+qz4/ao28vpvz75Xkk1ItPuMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFv6DbkSnlT4OMkN
+AAAAAElFTkSuQmCC
+------=_Part_61426_1390400313.1545291369762--
